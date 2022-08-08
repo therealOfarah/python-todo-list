@@ -10,8 +10,8 @@
       </li>
     {% endfor %}
   </div>
-  {% comment %} <a href="{{url 'addTodo'}}"> {% endcomment %}
-    <img src="{% static 'images/images.png' %}" alt="Todo-List" />
-  {% comment %} </a> {% endcomment %}
+    <a href="{% url 'todos_create' %}">
+      <img src="{% static 'images/images.png' %}" alt="Todo-List" />
+    </a>
 </section>
 {% endblock %}

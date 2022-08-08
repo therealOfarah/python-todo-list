@@ -18,7 +18,7 @@ class Importance(models.Model):
 
 
 class Todo(models.Model):
-  show= models.CharField(max_length=100)
+  task= models.CharField(max_length=100)
   description = models.TextField(max_length=250)
   importance= models.ManyToManyField(Importance)
   user=models.ForeignKey(User, on_delete=models.CASCADE)

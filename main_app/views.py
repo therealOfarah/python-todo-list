@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic.edit import CreateView
 from .models import Importance,Todo
 # Create your views here.
 
@@ -10,6 +11,15 @@ class Home(LoginView):
 
 def todos_index(request):
   return render(request, 'todo/index.html')
+
+class TodoCreate(CreateView):
+  model = Todo
+  fields = ['task','description']
+  success_url = '/todos/'
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 def signup(request):
   error_message = ""
