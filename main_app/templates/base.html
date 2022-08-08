@@ -19,10 +19,6 @@
 </head>
 <body>
   <header>
-    <div class="header-logo-container">
-    </div>
-    <nav>
-    </nav>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -31,20 +27,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <a href="/">
-            <img 
-              src="{% static 'images/logo (3).jpg' %}"
-              alt="The Cat Collector Logo"
-            >
           </a>
           <ul class="navbar-nav">
             {% if user.is_authenticated %}
-            {% comment %} <li><a href="{% url 'shows_index' %}">All Shows</a></li>
-            <li><a href="{% url 'genre_index' %}">All Genre's</a></li>
-            <li><a href="{% url 'shows_create' %}">Add Show</a></li>
-            <li><a href="{% url 'genre_create' %}">Add Genre</a></li> {% endcomment %}
+            <li><a href="{% url 'todos_index' %}">Todos</a></li>
             <li><a href="{% url 'logout' %}">Log out</a></li>
             {% else %}
             <li><a href="{% url 'home' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
             {% endif %}
             </ul>
         </div>

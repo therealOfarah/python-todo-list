@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+  <h3>HEHE</h3>
+  <div>
+    {% for todo in todos %}
+      <li class='todo__item list-group-item'>
+        <label class='form-check-label'>{{todo}}</label>
+      </li>
+    {% endfor %}
+  </div>
+  {% comment %} <a href="{{url 'addTodo'}}"> {% endcomment %}
+    <img src="{% static 'images/images.png' %}" alt="Todo-List" />
+  {% comment %} </a> {% endcomment %}
+</section>
+{% endblock %}
