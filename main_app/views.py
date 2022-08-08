@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Importance,Todo
 # Create your views here.
 
@@ -10,7 +10,8 @@ class Home(LoginView):
   template_name = 'home.html'
 
 def todos_index(request):
-  return render(request, 'todo/index.html')
+  todos= Todo.objects.all()
+  return render(request, 'todo/index.html', {'todos':todos})
 
 class TodoCreate(CreateView):
   model = Todo
@@ -21,6 +22,15 @@ class TodoCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
+class TodoUpdate(UpdateView):
+  model = Todo
+  # Let's disallow the renaming of a Todo by excluding the name field!
+  fields = ['task','description']
+  success_url = '/todos/'
+
+class TodoDelete(DeleteView):
+  model = Todo
+  success_url = '/todos/'
 def signup(request):
   error_message = ""
   if request.method == 'POST':

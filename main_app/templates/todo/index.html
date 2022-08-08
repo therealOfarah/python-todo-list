@@ -6,7 +6,12 @@
   <div>
     {% for todo in todos %}
       <li class='todo__item list-group-item'>
-        <label class='form-check-label'>{{todo}}</label>
+        <label class='form-check-label'>{{todo.task}}</label>
+        <div class="todo-actions">
+        </div>
+        <label class='form-check-label'>{{todo.description}}</label><br>
+        <a href="{% url 'todos_update' todo.id %}" class="btn warn">Edit</a>
+        <a href="{% url 'todos_delete' todo.id %}" class="btn danger">Delete</a>
       </li>
     {% endfor %}
   </div>
