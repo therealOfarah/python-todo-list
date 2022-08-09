@@ -23,7 +23,7 @@ class TodoCreate(CreateView):
 
 class TodoUpdate(UpdateView):
   model = Todo
-  fields = ['']
+  fields = ['task','description','level','color']
   success_url = '/todos'
 
 class TodoDelete(DeleteView):
