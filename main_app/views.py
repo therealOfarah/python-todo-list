@@ -9,7 +9,7 @@ class Home(LoginView):
   template_name = 'home.html'
 
 def todos_index(request):
-  todos= Todo.objects.all()
+  todos= Todo.objects.filter(user=request.user)
   return render(request, 'todo/index.html', {'todos':todos})
 
 class TodoCreate(CreateView):

@@ -9,6 +9,5 @@ class Todo(models.Model):
         default=1,
         validators=[MaxValueValidator(5), MinValueValidator(1)]
       )
-  color = models.CharField(max_length=20) 
-  user=models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
