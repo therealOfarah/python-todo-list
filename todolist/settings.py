@@ -16,10 +16,11 @@ import environ
 env = environ.Env()
 environ.Env.read_env()
 import django_heroku
-
+# import django_on_heroku
+# django_on_heroku.settings(locals())
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
