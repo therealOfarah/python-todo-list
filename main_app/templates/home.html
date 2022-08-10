@@ -2,19 +2,19 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
 {% endblock %}
 
 {% block content %}
 
-<h3>Andrew Tate: <q>No exceptional person ever lived like an average person</q></h3>
 <section class="logo-container">
+  <h3>Andrew Tate: <q>No exceptional person ever lived like an average person</q></h3>
   <div class="cat-container">
     <img src="{% static 'images/List.png' %}" alt="Todo-List" />
   </div>
 </section>
 {% if not user.is_authenticated %}
-<section>
+<section class='login'>
   <form action="{% url 'home' %}" method="post" class="login">
     <h1>Login</h1>
     {% csrf_token %}
