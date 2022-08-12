@@ -5,15 +5,15 @@ img{
   width: 20%;
 }
 .navbar-nav{
-  margin-right: 70vw;
+  margin-left: 75vw;
 }
 li{
-  padding-right:50px;
+  padding-right:30px;
 }
-a{
+li a{
   text-decoration: none;
   color: black;
 }
 html{
-  background-color: light-grey;
+  background-color:lightgrey;
 }

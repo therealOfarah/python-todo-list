@@ -9,9 +9,6 @@
 .card{
   margin-top: 5vh;
 }
-html{
-  background-color: red;
-}
 img{
   width: 200px;
   height: 150px;
@@ -19,4 +16,7 @@ img{
 
 body {
   background-color: aqua;
+}
+html{
+  background-color:lightgrey;
 }
