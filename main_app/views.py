@@ -14,7 +14,7 @@ def todos_index(request):
 
 class TodoCreate(CreateView):
   model = Todo
-  fields = ['task','description','level','color']
+  fields = ['task','description','level']
   success_url = '/todos/'
   def form_valid(self, form):
     form.instance.user = self.request.user
@@ -22,7 +22,7 @@ class TodoCreate(CreateView):
 
 class TodoUpdate(UpdateView):
   model = Todo
-  fields = ['task','description','level','color']
+  fields = ['task','description','level']
   success_url = '/todos'
 
 class TodoDelete(DeleteView):
