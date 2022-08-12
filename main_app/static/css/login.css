@@ -5,6 +5,9 @@
   width: 20%
 }
 
-h3{
-  text-align: center;
+h3 {
+  display: block;
+  margin-left: 20vw;
+  margin-right: auto;
+  margin-top: 40vh;
 }

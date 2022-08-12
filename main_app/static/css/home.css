@@ -4,3 +4,16 @@ img{
   margin-right: auto;
   width: 20%;
 }
+.navbar-nav{
+  margin-right: 70vw;
+}
+li{
+  padding-right:50px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+html{
+  background-color: light-grey;
+}
