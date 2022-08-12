@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-<link rel="stylesheet" href="{% static "css/delete.css" %}">
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static "css/delete.css" %}">
+{% endblock %}
 {% block content %}
 
 <div class="page-header">
