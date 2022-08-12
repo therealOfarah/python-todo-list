@@ -2,7 +2,8 @@
 This app helps you track your todos
 
 # Images
-
+![image](main/../main_app/static/images/homepage.png)
+![image](main_app/static/images/todopage.png)
 # Tools
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 
